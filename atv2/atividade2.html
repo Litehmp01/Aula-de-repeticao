@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vamos Contar</title>
+</head>
+
+<body>
+    <label for="">Inicio</label><br>
+    <input type="number" id="inicio"><br>
+
+    <label for="">Fim</label><br>
+    <input type="number" id="fim"><br>
+
+    <label for="">Passo</label><br>
+    <input type="number" id="passo"><br>
+    
+    <button id="btn"> Contar </button>
+    <p id="result"></p>
+
+    <!-------------------Java-------------------->
+    <script>
+        let botao = document.getElementById("btn")
+        let cont
+        let result = document.getElementById("result")
+
+        botao.addEventListener("click", function () {
+            let inicio = parseInt(document.getElementById("inicio").value);
+            let fim = parseInt(document.getElementById("fim").value);
+            let passo = parseInt(document.getElementById("passo").value);
+            let cont = inicio;
+
+            while (cont <= fim) {
+                result.textContent+= (`${cont}- `);
+                cont+=passo;
+            }
+            })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curtidas</title>
+</head>
+
+<body>
+    <h2>Curtidas</h2>
+    <img src="paisagem.jpg">
+    <button id="curtir">Curtida</button>
+    <p id="result">♥</p>
+    <script>
+        let button = document.getElementById("curtir");
+        let result = document.getElementById("result");
+        let cont = 0; //começo
+
+        button.addEventListener("click", function () {
+            cont++; // add curtida
+            result.textContent = `♥ ${cont}`;
+        });
+    </script>
+</body>
+
+</html>
